@@ -1,6 +1,6 @@
 #!/bin/bash -e
-npm i -g @angular/cli
-if [-d empty_project]
+sudo npm i -g @angular/cli
+if [ -d "empty_project" ]
 then
     rm -R empty_project/
 fi
