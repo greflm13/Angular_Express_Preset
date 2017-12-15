@@ -7,6 +7,9 @@ fi
 mkdir empty_project
 cd empty_project
 ng new ng2
+cd ng2
+npm i --save @ng-bootstrap/ng-bootstrap
+cd ..
 mkdir server
 cd server
 npm init server

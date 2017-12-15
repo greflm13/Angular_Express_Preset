@@ -27,7 +27,9 @@ cd src
 @echo import * as bodyparser from 'body-parser';
 @echo import * as debugsx from 'debug-sx';
 ) > main.ts
-cd ..\..\..
+cd ..\..\ng2
+start cmd /C npm i --save @ng-bootstrap/ng-bootstrap
+cd ..\..
 copy gulpfile.js empty_project\server\gulpfile.js
 code empty_project\
 IF "%interactive%"=="0" PAUSE
