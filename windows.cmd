@@ -2,7 +2,7 @@
 SET interactive=0
 ECHO %CMDCMDLINE% | FINDSTR /L %COMSPEC% >NUL 2>&1
 IF %ERRORLEVEL% == 0 SET interactive=1
-echo uodating angular, please wait for the window to close.
+echo updating angular, please wait for the window to close.
 start cmd /C update_angular && pause
 IF EXIST "empty_project" echo deleting old project... && rmdir empty_project /s /q
 echo creating folder...
