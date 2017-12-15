@@ -12,7 +12,6 @@ cd server
 npm init server
 npm i --save express bootstrap debug debug-sx
 npm i --save-dev @types/debug @types/express @types/node del gulp gulp-changed gulp-sourcemaps gulp-typescript gulp-using merge-stream run-sequence typescript
-code package.json
 mkdir src
 cd src
 cat <<EOF >main.ts
@@ -27,3 +26,4 @@ import * as debugsx from 'debug-sx';
 EOF
 cd ../../..
 rsync -aP gulpfile.js empty_project/server/gulpfile.js
+code empty_project/
