@@ -14,7 +14,7 @@ mkdir server
 cd server
 echo initializing server...
 copy ..\..\Angular_Express_Preset\package.json package.json
-npm i
+start cmd /C npm i && pause
 mkdir src
 cd src
 (
@@ -30,6 +30,7 @@ cd ..\..\ng2
 start cmd /C npm i --save @ng-bootstrap/ng-bootstrap
 cd ..\..\Angular_Express_Preset
 copy gulpfile.js ..\%projectname%\server\gulpfile.js
-code %projectname%\
+cd ..\%projectname%
+code .
 IF "%interactive%"=="0" PAUSE
 EXIT /B 0
