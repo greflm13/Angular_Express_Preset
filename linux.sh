@@ -10,9 +10,8 @@ npm i --save @ng-bootstrap/ng-bootstrap
 cd ..
 mkdir server
 cd server
-npm init server
-npm i --save express bootstrap debug debug-sx
-npm i --save-dev @types/debug @types/express @types/node del gulp gulp-changed gulp-sourcemaps gulp-typescript gulp-using merge-stream run-sequence typescript
+rsync -aP ../../Angular_Express_Preset/package.json ./package.json
+npm i
 mkdir src
 cd src
 cat <<EOF >main.ts
@@ -25,6 +24,6 @@ import * as express from 'express';
 import * as bodyparser from 'body-parser';
 import * as debugsx from 'debug-sx';
 EOF
-cd ../../..
-rsync -aP gulpfile.js $project/server/gulpfile.js
+cd ../../../Angular_Express_Preset
+rsync -aP gulpfile.js ../$project/server/gulpfile.js
 code $project/

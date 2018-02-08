@@ -13,9 +13,8 @@ start cmd /C ng new ng2
 mkdir server
 cd server
 echo initializing server...
-start cmd /C npm init server && pause
-start cmd /C npm i --save express bootstrap debug debug-sx
-start cmd /C npm i --save-dev @types/debug @types/express @types/node del gulp gulp-changed gulp-sourcemaps gulp-typescript gulp-using merge-stream run-sequence typescript
+copy ..\..\Angular_Express_Preset\package.json package.json
+npm i
 mkdir src
 cd src
 (
@@ -29,8 +28,8 @@ cd src
 ) > main.ts
 cd ..\..\ng2
 start cmd /C npm i --save @ng-bootstrap/ng-bootstrap
-cd ..\..
-copy gulpfile.js %projectname%\server\gulpfile.js
+cd ..\..\Angular_Express_Preset
+copy gulpfile.js ..\%projectname%\server\gulpfile.js
 code %projectname%\
 IF "%interactive%"=="0" PAUSE
 EXIT /B 0
