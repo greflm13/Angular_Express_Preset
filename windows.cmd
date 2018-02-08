@@ -9,7 +9,7 @@ cd ..
 mkdir %projectname%
 cd %projectname%
 echo intializing angular...
-start cmd /C ng new ng2
+start cmd /C ng new ng2 && pause
 mkdir server
 cd server
 echo initializing server...
@@ -27,7 +27,7 @@ cd src
 @echo import * as debugsx from 'debug-sx';
 ) > main.ts
 cd ..\..\ng2
-start cmd /C npm i --save @ng-bootstrap/ng-bootstrap
+start cmd /C npm i --save @ng-bootstrap/ng-bootstrap && pause
 cd ..\..\Angular_Express_Preset
 copy gulpfile.js ..\%projectname%\server\gulpfile.js
 cd ..\%projectname%
