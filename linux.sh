@@ -1,11 +1,8 @@
 #!/bin/bash -e
 sudo npm i -g @angular/cli
-if [ -d "empty_project" ]
-then
-    rm -R empty_project/
-fi
-mkdir empty_project
-cd empty_project
+read -p 'Projectname: ' project
+mkdir $project
+cd $project
 ng new ng2
 cd ng2
 npm i --save @ng-bootstrap/ng-bootstrap
@@ -28,5 +25,5 @@ import * as bodyparser from 'body-parser';
 import * as debugsx from 'debug-sx';
 EOF
 cd ../../..
-rsync -aP gulpfile.js empty_project/server/gulpfile.js
-code empty_project/
+rsync -aP gulpfile.js $project/server/gulpfile.js
+code $project/

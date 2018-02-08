@@ -4,10 +4,9 @@ ECHO %CMDCMDLINE% | FINDSTR /L %COMSPEC% >NUL 2>&1
 IF %ERRORLEVEL% == 0 SET interactive=1
 echo updating angular, please wait for the window to close.
 start cmd /C update_angular && pause
-IF EXIST "empty_project" echo deleting old project... && rmdir empty_project /s /q
-echo creating folder...
-mkdir empty_project
-cd empty_project
+set /p projectname=Projectname: 
+mkdir %projectname%
+cd %projectname%
 echo intializing angular...
 start cmd /C ng new ng2
 mkdir server
@@ -30,7 +29,7 @@ cd src
 cd ..\..\ng2
 start cmd /C npm i --save @ng-bootstrap/ng-bootstrap
 cd ..\..
-copy gulpfile.js empty_project\server\gulpfile.js
-code empty_project\
+copy gulpfile.js %projectname%\server\gulpfile.js
+code %projectname%\
 IF "%interactive%"=="0" PAUSE
 EXIT /B 0
