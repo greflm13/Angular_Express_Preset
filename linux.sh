@@ -1,6 +1,7 @@
 #!/bin/bash -e
 sudo npm i -g @angular/cli
 read -p 'Projectname: ' project
+cd ..
 mkdir $project
 cd $project
 ng new ng2

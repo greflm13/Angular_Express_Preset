@@ -5,6 +5,7 @@ IF %ERRORLEVEL% == 0 SET interactive=1
 echo updating angular, please wait for the window to close.
 start cmd /C update_angular && pause
 set /p projectname=Projectname: 
+cd ..
 mkdir %projectname%
 cd %projectname%
 echo intializing angular...
