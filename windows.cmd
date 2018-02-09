@@ -3,7 +3,7 @@ SET interactive=0
 ECHO %CMDCMDLINE% | FINDSTR /L %COMSPEC% >NUL 2>&1
 IF %ERRORLEVEL% == 0 SET interactive=1
 echo updating angular, please wait for the window to close.
-start cmd /C update_angular && pause
+start cmd /C npm i -g @angular/cli && pause
 set /p projectname=Projectname: 
 cd ..
 mkdir %projectname%
