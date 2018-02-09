@@ -26,4 +26,4 @@ import * as debugsx from 'debug-sx';
 EOF
 cd ../../../Angular_Express_Preset
 rsync -aP gulpfile.js ../$project/server/gulpfile.js
-code $project/
+code $project
