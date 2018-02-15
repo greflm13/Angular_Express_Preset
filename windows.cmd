@@ -30,6 +30,7 @@ cd ..\..\ng2
 start cmd /C npm i --save @ng-bootstrap/ng-bootstrap && pause
 cd ..\..\Angular_Express_Preset
 copy gulpfile.js ..\%projectname%\server\gulpfile.js
+copy upper.package.json ..\%projectname%\package.json
 cd ..\%projectname%
 code .
 IF "%interactive%"=="0" PAUSE
