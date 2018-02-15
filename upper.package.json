@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "cd server; rm -rf dist; cd ../ng2; rm -rf dist",
     "build": "npm run builds; npm run buildc",
-    "builds": "cd server; gulp cleanAndBuild",
+    "builds": "cd server; gulp build",
     "buildc": "cd ng2; ng build --prod --output-hashing none",
     "prestart": "npm run build",
     "start": "node server/dist/main.js",
