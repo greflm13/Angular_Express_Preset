@@ -4,8 +4,8 @@ read -p 'Projectname: ' project
 cd ..
 mkdir $project
 cd $project
-ng new ng2
-cd ng2
+ng new ngx
+cd ngx
 npm i --save @ng-bootstrap/ng-bootstrap
 cd ..
 mkdir server
